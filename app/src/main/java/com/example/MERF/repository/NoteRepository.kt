@@ -1,7 +1,7 @@
-package com.example.pomoductivity.repository
+package com.example.MERF.repository
 
-import com.example.pomoductivity.database.NoteDatabase
-import com.example.pomoductivity.model.Note
+import com.example.MERF.database.NoteDatabase
+import com.example.MERF.model.Note
 
 class NoteRepository(private val db: NoteDatabase) {
     suspend fun insertNote(note: Note) = db.getNoteDao().insertNote(note)

@@ -6,7 +6,7 @@
     app:startDestination="@id/homeFragment">
     <fragment
         android:id="@+id/homeFragment"
-        android:name="com.example.pomoductivity.fragments.HomeFragment"
+        android:name="com.example.MERF.fragments.HomeFragment"
         android:label="fragment_home"
         tools:layout="@layout/fragment_home" >
         <action
@@ -18,7 +18,7 @@
     </fragment>
     <fragment
         android:id="@+id/addNoteFragment"
-        android:name="com.example.pomoductivity.fragments.AddNoteFragment"
+        android:name="com.example.MERF.fragments.AddNoteFragment"
         android:label="fragment_add_note"
         tools:layout="@layout/fragment_add_note" >
         <action
@@ -27,7 +27,7 @@
     </fragment>
     <fragment
         android:id="@+id/editNoteFragment"
-        android:name="com.example.pomoductivity.fragments.EditNoteFragment"
+        android:name="com.example.MERF.fragments.EditNoteFragment"
         android:label="fragment_edit_note"
         tools:layout="@layout/fragment_edit_note" >
         <action
@@ -35,7 +35,7 @@
             app:destination="@id/homeFragment" />
         <argument
             android:name="note"
-            app:argType="com.example.pomoductivity.model.Note"
+            app:argType="com.example.MERF.model.Note"
             app:nullable="true" />
     </fragment>
 </navigation>

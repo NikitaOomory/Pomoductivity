@@ -1,4 +1,4 @@
-package com.example.pomoductivity.database
+package com.example.MERF.database
 
 import androidx.lifecycle.LiveData
 import androidx.room.Dao
@@ -7,7 +7,7 @@ import androidx.room.Insert
 import androidx.room.OnConflictStrategy
 import androidx.room.Query
 import androidx.room.Update
-import com.example.pomoductivity.model.Note
+import com.example.MERF.model.Note
 
 @Dao
 interface NoteDao {

@@ -1,10 +1,10 @@
-package com.example.pomoductivity.database
+package com.example.MERF.database
 
 import android.content.Context
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
-import com.example.pomoductivity.model.Note
+import com.example.MERF.model.Note
 
 @Database(entities = [Note::class], version = 1)
 abstract class NoteDatabase: RoomDatabase() {

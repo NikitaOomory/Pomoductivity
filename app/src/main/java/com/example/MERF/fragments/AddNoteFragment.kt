@@ -1,4 +1,4 @@
-package com.example.pomoductivity.fragments
+package com.example.MERF.fragments
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -15,9 +15,9 @@ import androidx.lifecycle.Lifecycle
 import androidx.navigation.findNavController
 import com.example.notesroompractice.R
 import com.example.notesroompractice.databinding.FragmentAddNoteBinding
-import com.example.pomoductivity.MainActivity
-import com.example.pomoductivity.model.Note
-import com.example.pomoductivity.viewmodel.NoteViewModel
+import com.example.MERF.MainActivity
+import com.example.MERF.model.Note
+import com.example.MERF.viewmodel.NoteViewModel
 
 class AddNoteFragment : Fragment(R.layout.fragment_add_note), MenuProvider {
 

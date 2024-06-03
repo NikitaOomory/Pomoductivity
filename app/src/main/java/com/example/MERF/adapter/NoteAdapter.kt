@@ -1,4 +1,4 @@
-package com.example.pomoductivity.adapter
+package com.example.MERF.adapter
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
@@ -7,8 +7,8 @@ import androidx.recyclerview.widget.AsyncListDiffer
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
 import com.example.notesroompractice.databinding.NoteLayoutBinding
-import com.example.pomoductivity.fragments.HomeFragmentDirections
-import com.example.pomoductivity.model.Note
+import com.example.MERF.fragments.HomeFragmentDirections
+import com.example.MERF.model.Note
 
 class NoteAdapter : RecyclerView.Adapter<NoteAdapter.NoteViewHolder>() {
 

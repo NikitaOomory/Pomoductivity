@@ -1,16 +1,13 @@
-package com.example.pomoductivity
+package com.example.MERF
 
 import android.os.Bundle
-import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
 import androidx.lifecycle.ViewModelProvider
 import com.example.notesroompractice.R
-import com.example.pomoductivity.database.NoteDatabase
-import com.example.pomoductivity.repository.NoteRepository
-import com.example.pomoductivity.viewmodel.NoteViewModel
-import com.example.pomoductivity.viewmodel.NoteViewModelFactory
+import com.example.MERF.database.NoteDatabase
+import com.example.MERF.repository.NoteRepository
+import com.example.MERF.viewmodel.NoteViewModel
+import com.example.MERF.viewmodel.NoteViewModelFactory
 
 class MainActivity : AppCompatActivity() {
 

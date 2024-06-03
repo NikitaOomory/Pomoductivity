@@ -1,9 +1,9 @@
-package com.example.pomoductivity.viewmodel
+package com.example.MERF.viewmodel
 
 import android.app.Application
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
-import com.example.pomoductivity.repository.NoteRepository
+import com.example.MERF.repository.NoteRepository
 
 class NoteViewModelFactory (val app: Application, private val noteRepository: NoteRepository) : ViewModelProvider.Factory {
 

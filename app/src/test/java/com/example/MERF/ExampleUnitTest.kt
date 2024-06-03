@@ -1,4 +1,4 @@
-package com.example.pomoductivity
+package com.example.MERF
 
 import org.junit.Test
 

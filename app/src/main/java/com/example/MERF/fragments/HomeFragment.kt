@@ -1,5 +1,6 @@
-package com.example.pomoductivity.fragments
+package com.example.MERF.fragments
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -16,10 +17,11 @@ import androidx.navigation.findNavController
 import androidx.recyclerview.widget.StaggeredGridLayoutManager
 import com.example.notesroompractice.R
 import com.example.notesroompractice.databinding.FragmentHomeBinding
-import com.example.pomoductivity.MainActivity
-import com.example.pomoductivity.adapter.NoteAdapter
-import com.example.pomoductivity.model.Note
-import com.example.pomoductivity.viewmodel.NoteViewModel
+import com.example.MERF.MainActivity
+import com.example.MERF.PomodoroActivity
+import com.example.MERF.adapter.NoteAdapter
+import com.example.MERF.model.Note
+import com.example.MERF.viewmodel.NoteViewModel
 
 
 class HomeFragment : Fragment(R.layout.fragment_home), SearchView.OnQueryTextListener, MenuProvider {
@@ -36,6 +38,7 @@ class HomeFragment : Fragment(R.layout.fragment_home), SearchView.OnQueryTextLis
     ): View? {
         // Inflate the layout for this fragment
         homeBinding = FragmentHomeBinding.inflate(inflater, container, false)
+
         return binding.root
     }
 
@@ -51,6 +54,12 @@ class HomeFragment : Fragment(R.layout.fragment_home), SearchView.OnQueryTextLis
         binding.addNoteFab.setOnClickListener{
             it.findNavController().navigate(R.id.action_homeFragment_to_addNoteFragment)
         }
+
+        binding.goToPomodoroTimerButton.setOnClickListener{
+            val intent = Intent (getActivity(), PomodoroActivity::class.java)
+            startActivity(intent)
+        }
+
     }
 
     private fun updateUI(note: List<Note>?){
@@ -80,7 +89,7 @@ class HomeFragment : Fragment(R.layout.fragment_home), SearchView.OnQueryTextLis
     }
 
     private fun searchNote(query: String?){
-        val searchQuery = "%$query"
+        val searchQuery = "%$query%"
 
         notesViewModel.searchNote(searchQuery).observe(this) {
             list -> noteAdapter.differ.submitList(list)

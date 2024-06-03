@@ -1,10 +1,10 @@
-package com.example.pomoductivity.viewmodel
+package com.example.MERF.viewmodel
 
 import android.app.Application
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.viewModelScope
-import com.example.pomoductivity.model.Note
-import com.example.pomoductivity.repository.NoteRepository
+import com.example.MERF.model.Note
+import com.example.MERF.repository.NoteRepository
 import kotlinx.coroutines.launch
 
 class NoteViewModel(app: Application, private val noteRepository: NoteRepository) : AndroidViewModel(app){
