@@ -1,4 +1,4 @@
-package com.example.MERF.model
+package com.example.MORF.model
 
 import android.os.Parcelable
 import androidx.room.Entity
@@ -11,7 +11,8 @@ data class Note (
     @PrimaryKey(autoGenerate = true)
         val id: Int,
         val noteTitle: String,
-        val noteDesk: String
+        val noteDesk: String,
+        val tag: String
 ): Parcelable
 
 

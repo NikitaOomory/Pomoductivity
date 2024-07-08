@@ -1,4 +1,4 @@
-package com.example.MERF.fragments
+package com.example.MORF.fragments
 
 import android.app.AlertDialog
 import android.os.Bundle
@@ -17,9 +17,9 @@ import androidx.navigation.findNavController
 import androidx.navigation.fragment.navArgs
 import com.example.notesroompractice.R
 import com.example.notesroompractice.databinding.FragmentEditNoteBinding
-import com.example.MERF.MainActivity
-import com.example.MERF.model.Note
-import com.example.MERF.viewmodel.NoteViewModel
+import com.example.MORF.MainActivity
+import com.example.MORF.model.Note
+import com.example.MORF.viewmodel.NoteViewModel
 
 
 class EditNoteFragment : Fragment(R.layout.fragment_edit_note), MenuProvider {
@@ -48,22 +48,26 @@ class EditNoteFragment : Fragment(R.layout.fragment_edit_note), MenuProvider {
         val menuHost: MenuHost = requireActivity()
         menuHost.addMenuProvider(this, viewLifecycleOwner, Lifecycle.State.RESUMED)
 
+
         notesViewModel = (activity as MainActivity).noteViewModel
         currentNote = args.note!!
 
-        binding.editNoteTitle.setText(currentNote.noteTitle)
-        binding.editNoteDesc.setText(currentNote.noteDesk)
+        binding.EditNoteTitle.setText(currentNote.noteTitle)
+        binding.EditNoteDesc.setText(currentNote.noteDesk)
+        binding.EditNoteTag.setText(currentNote.noteDesk)
 
         binding.editNoteFab.setOnClickListener{
-           val noteTitle = binding.editNoteTitle.text.toString().trim()
-            val noteDesc = binding.editNoteDesc.text.toString().trim()
+           val noteTitle = binding.EditNoteTitle.text.toString().trim()
+            val noteDesc = binding.EditNoteDesc.text.toString().trim()
+            val tag = binding.EditNoteTag.text.toString().trim()
 
             if(noteTitle.isNotEmpty()){
-                val note = Note(currentNote.id, noteTitle, noteDesc)
+                val note = Note(currentNote.id, noteTitle, noteDesc, tag)
                 notesViewModel.updateNote(note)
+
                 view.findNavController().popBackStack(R.id.homeFragment, false)
             }else{
-                Toast.makeText(context, "Заполните заголовок", Toast.LENGTH_SHORT)
+                //TODO: сделать отдельный метод со cвоим context
             }
         }
     }

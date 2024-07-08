@@ -1,4 +1,4 @@
-package com.example.MERF
+package com.example.MORF
 
 import org.junit.Test
 

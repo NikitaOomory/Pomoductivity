@@ -1,10 +1,10 @@
-package com.example.MERF.viewmodel
+package com.example.MORF.viewmodel
 
 import android.app.Application
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.viewModelScope
-import com.example.MERF.model.Note
-import com.example.MERF.repository.NoteRepository
+import com.example.MORF.model.Note
+import com.example.MORF.repository.NoteRepository
 import kotlinx.coroutines.launch
 
 class NoteViewModel(app: Application, private val noteRepository: NoteRepository) : AndroidViewModel(app){

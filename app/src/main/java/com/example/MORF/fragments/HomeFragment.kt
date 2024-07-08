@@ -1,4 +1,4 @@
-package com.example.MERF.fragments
+package com.example.MORF.fragments
 
 import android.content.Intent
 import android.os.Bundle
@@ -17,11 +17,11 @@ import androidx.navigation.findNavController
 import androidx.recyclerview.widget.StaggeredGridLayoutManager
 import com.example.notesroompractice.R
 import com.example.notesroompractice.databinding.FragmentHomeBinding
-import com.example.MERF.MainActivity
-import com.example.MERF.PomodoroActivity
-import com.example.MERF.adapter.NoteAdapter
-import com.example.MERF.model.Note
-import com.example.MERF.viewmodel.NoteViewModel
+import com.example.MORF.MainActivity
+import com.example.MORF.PomodoroActivity
+import com.example.MORF.adapter.NoteAdapter
+import com.example.MORF.model.Note
+import com.example.MORF.viewmodel.NoteViewModel
 
 
 class HomeFragment : Fragment(R.layout.fragment_home), SearchView.OnQueryTextListener, MenuProvider {

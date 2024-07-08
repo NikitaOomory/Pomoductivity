@@ -1,4 +1,4 @@
-package com.example.MERF.database
+package com.example.MORF.database
 
 import androidx.lifecycle.LiveData
 import androidx.room.Dao
@@ -7,7 +7,7 @@ import androidx.room.Insert
 import androidx.room.OnConflictStrategy
 import androidx.room.Query
 import androidx.room.Update
-import com.example.MERF.model.Note
+import com.example.MORF.model.Note
 
 @Dao
 interface NoteDao {
@@ -21,9 +21,9 @@ interface NoteDao {
     @Delete
     suspend fun deleteNote(note: Note)
 
-    @Query("SELECT * FROM NOTES ORDER BY id DESC")
+    @Query("SELECT * FROM NOTES ORDER BY noteTitle DESC")
     fun getAllNotes(): LiveData<List<Note>>
 
-    @Query("SELECT * FROM NOTES WHERE noteTitle LIKE :query OR noteDesk LIKE :query")
+    @Query("SELECT * FROM NOTES WHERE noteTitle LIKE :query OR noteDesk LIKE :query OR tag LIKE :query" )
     fun searchNote (query: String?): LiveData<List<Note>>
 }

@@ -8,34 +8,56 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        android:padding="12dp"
-        tools:context=".UpdateNoteFragment">
+        tools:context=".NewNoteFragment"
+        android:padding="12dp">
 
         <TextView
-            android:id="@+id/editNoteHeading"
+            android:id="@+id/addNoteHeading"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="18dp"
             android:text="Редактирование"
-            android:textStyle="bold"
             android:textColor="@color/pink"
-            android:textSize="24sp" />
+            android:textSize="24sp"
+            android:textStyle="bold" />
 
-        <EditText
-            android:id="@+id/editNoteTitle"
+        <LinearLayout
+            android:id="@+id/hedderNote"
             android:layout_width="match_parent"
-            android:layout_height="60dp"
-            android:hint="Введите заголовок заметки"
-            android:padding="12dp"
-            android:textSize="20sp"
-            android:layout_below="@id/editNoteHeading"
-            android:background="@drawable/pink_border"
-            android:layout_marginTop="16dp"
-            android:maxLines="1" />
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_below="@+id/addNoteHeading">
+
+            <EditText
+                android:id="@+id/EditNoteTitle"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:hint="Введите заголовок заметки"
+                android:padding="12dp"
+                android:textSize="20sp"
+                android:layout_below="@id/addNoteHeading"
+                android:background="@drawable/pink_border"
+                android:layout_marginTop="16dp"
+                android:maxLines="1" />
+
+            <EditText
+                android:id="@+id/EditNoteTag"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:hint="Введите ярлык заметки"
+                android:padding="12dp"
+                android:textSize="20sp"
+                android:layout_below="@id/addNoteHeading"
+                android:background="@drawable/pink_border"
+                android:layout_marginTop="16dp"
+                android:maxLines="1" />
+
+
+        </LinearLayout>
 
         <EditText
-            android:id="@+id/editNoteDesc"
+            android:id="@+id/EditNoteDesc"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:hint="Введите текст заметки"
@@ -43,7 +65,7 @@
             android:padding="12dp"
             android:textSize="18sp"
             android:background="@drawable/pink_border"
-            android:layout_below="@id/editNoteTitle"
+            android:layout_below="@id/hedderNote"
             android:layout_marginTop="12dp" />
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton

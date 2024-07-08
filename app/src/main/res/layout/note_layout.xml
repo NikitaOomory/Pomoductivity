@@ -37,6 +37,18 @@
                 android:textSize="14sp"
                 android:textColor="@color/pink"/>
 
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/tag"
+                android:layout_marginTop="8dp"
+                android:maxHeight="170dp"
+                android:text="Текст"
+                android:textSize="14sp"
+                android:background="@drawable/pink_border"
+                android:textColor="@color/pink"/>
+
+
         </LinearLayout>
     </androidx.cardview.widget.CardView>
 </layout>

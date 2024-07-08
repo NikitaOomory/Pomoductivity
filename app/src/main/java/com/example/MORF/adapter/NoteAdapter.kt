@@ -1,4 +1,4 @@
-package com.example.MERF.adapter
+package com.example.MORF.adapter
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
@@ -7,8 +7,8 @@ import androidx.recyclerview.widget.AsyncListDiffer
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
 import com.example.notesroompractice.databinding.NoteLayoutBinding
-import com.example.MERF.fragments.HomeFragmentDirections
-import com.example.MERF.model.Note
+import com.example.MORF.fragments.HomeFragmentDirections
+import com.example.MORF.model.Note
 
 class NoteAdapter : RecyclerView.Adapter<NoteAdapter.NoteViewHolder>() {
 
@@ -18,7 +18,8 @@ class NoteAdapter : RecyclerView.Adapter<NoteAdapter.NoteViewHolder>() {
         override fun areItemsTheSame(oldItem: Note, newItem: Note): Boolean {
             return oldItem.id == newItem.id &&
                     oldItem.noteDesk == newItem.noteDesk &&
-                    oldItem. noteTitle == newItem.noteTitle
+                    oldItem. noteTitle == newItem.noteTitle &&
+                    oldItem. tag == newItem.tag
         }
 
         override fun areContentsTheSame(oldItem: Note, newItem: Note): Boolean {
@@ -43,6 +44,7 @@ class NoteAdapter : RecyclerView.Adapter<NoteAdapter.NoteViewHolder>() {
 
         holder.itemBinding.noteTitle.text = currentNote.noteTitle
         holder.itemBinding.noteDesc.text = currentNote.noteDesk
+        holder.itemBinding.tag.text = currentNote.tag
 
         holder.itemView.setOnClickListener{
             val direction = HomeFragmentDirections.actionHomeFragmentToEditNoteFragment(currentNote)

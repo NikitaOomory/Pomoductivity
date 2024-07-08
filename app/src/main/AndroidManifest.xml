@@ -7,16 +7,16 @@
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
         android:icon="@mipmap/ic_launcher"
-        android:label="@string/app_name"
+        android:label="MORF"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.NotesRoomPractice."
         tools:targetApi="31">
         <activity
-            android:name="com.example.MERF.PomodoroActivity"
+            android:name="com.example.MORF.PomodoroActivity"
             android:exported="false" />
         <activity
-            android:name="com.example.MERF.MainActivity"
+            android:name="com.example.MORF.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

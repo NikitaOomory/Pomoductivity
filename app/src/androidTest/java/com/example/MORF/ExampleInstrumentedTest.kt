@@ -1,4 +1,4 @@
-package com.example.MERF
+package com.example.MORF
 
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.ext.junit.runners.AndroidJUnit4

@@ -1,13 +1,13 @@
-package com.example.MERF
+package com.example.MORF
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
 import com.example.notesroompractice.R
-import com.example.MERF.database.NoteDatabase
-import com.example.MERF.repository.NoteRepository
-import com.example.MERF.viewmodel.NoteViewModel
-import com.example.MERF.viewmodel.NoteViewModelFactory
+import com.example.MORF.database.NoteDatabase
+import com.example.MORF.repository.NoteRepository
+import com.example.MORF.viewmodel.NoteViewModel
+import com.example.MORF.viewmodel.NoteViewModelFactory
 
 class MainActivity : AppCompatActivity() {
 
@@ -16,8 +16,6 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-
-
         setupViewModel()
     }
 

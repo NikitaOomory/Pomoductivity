@@ -1,9 +1,9 @@
-package com.example.MERF.viewmodel
+package com.example.MORF.viewmodel
 
 import android.app.Application
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
-import com.example.MERF.repository.NoteRepository
+import com.example.MORF.repository.NoteRepository
 
 class NoteViewModelFactory (val app: Application, private val noteRepository: NoteRepository) : ViewModelProvider.Factory {
 

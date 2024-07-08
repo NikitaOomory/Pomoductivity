@@ -1,7 +1,7 @@
-package com.example.MERF.repository
+package com.example.MORF.repository
 
-import com.example.MERF.database.NoteDatabase
-import com.example.MERF.model.Note
+import com.example.MORF.database.NoteDatabase
+import com.example.MORF.model.Note
 
 class NoteRepository(private val db: NoteDatabase) {
     suspend fun insertNote(note: Note) = db.getNoteDao().insertNote(note)

@@ -1,4 +1,4 @@
-package com.example.MERF.fragments
+package com.example.MORF.fragments
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -15,9 +15,9 @@ import androidx.lifecycle.Lifecycle
 import androidx.navigation.findNavController
 import com.example.notesroompractice.R
 import com.example.notesroompractice.databinding.FragmentAddNoteBinding
-import com.example.MERF.MainActivity
-import com.example.MERF.model.Note
-import com.example.MERF.viewmodel.NoteViewModel
+import com.example.MORF.MainActivity
+import com.example.MORF.model.Note
+import com.example.MORF.viewmodel.NoteViewModel
 
 class AddNoteFragment : Fragment(R.layout.fragment_add_note), MenuProvider {
 
@@ -48,9 +48,10 @@ class AddNoteFragment : Fragment(R.layout.fragment_add_note), MenuProvider {
     private fun saveNote(view: View){
         val noteTitle = binding.addNoteTitle.text.toString().trim()
         val noteDesc = binding.addNoteDesc.text.toString().trim()
+        val tag = binding.addNotetag.text.toString().trim()
 
         if(noteTitle.isNotEmpty()){
-            val note = Note(0, noteTitle, noteDesc)
+            val note = Note(0, noteTitle, noteDesc, tag)
             notesViewModel.addNote(note)
 
             Toast.makeText(addNoteView.context, "Сохранено", Toast.LENGTH_SHORT).show()

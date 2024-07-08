@@ -22,17 +22,39 @@
             android:textColor="@color/pink"
             android:textSize="24sp" />
 
-        <EditText
-            android:id="@+id/addNoteTitle"
+        <LinearLayout
+            android:id="@+id/hedderNote"
             android:layout_width="match_parent"
-            android:layout_height="60dp"
-            android:hint="Введите заголовок заметки"
-            android:padding="12dp"
-            android:textSize="20sp"
-            android:layout_below="@id/addNoteHeading"
-            android:background="@drawable/pink_border"
-            android:layout_marginTop="16dp"
-            android:maxLines="1" />
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_below="@+id/addNoteHeading">
+
+            <EditText
+                android:id="@+id/addNoteTitle"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:hint="Введите заголовок заметки"
+                android:padding="12dp"
+                android:textSize="20sp"
+                android:layout_below="@id/addNoteHeading"
+                android:background="@drawable/pink_border"
+                android:layout_marginTop="16dp"
+                android:maxLines="1" />
+
+            <EditText
+                android:id="@+id/addNotetag"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:hint="Введите заголовок заметки"
+                android:padding="12dp"
+                android:textSize="20sp"
+                android:layout_below="@id/addNoteHeading"
+                android:background="@drawable/pink_border"
+                android:layout_marginTop="16dp"
+                android:maxLines="1" />
+
+
+        </LinearLayout>
 
         <EditText
             android:id="@+id/addNoteDesc"
@@ -43,8 +65,13 @@
             android:padding="12dp"
             android:textSize="18sp"
             android:background="@drawable/pink_border"
-            android:layout_below="@id/addNoteTitle"
+            android:layout_below="@id/hedderNote"
             android:layout_marginTop="12dp" />
+
+
+
+
+
 
     </RelativeLayout>
 </layout>
